@@ -12,7 +12,6 @@ function findLargestElement(numbers) {
       largestNumber = number;
     }
   });
-  console.log(largestNumber);
   return largestNumber;
 }
 
