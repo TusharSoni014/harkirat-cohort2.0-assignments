@@ -17,8 +17,9 @@ class Todo {
   add(todo) {
     this.todos.push(todo);
   }
-  remove(indexOfTodo) {
-    if (indexOfTodo >= 0 && indexOfTodo < this.todos.length) {
+  remove(todo) {
+    const indexOfTodo = this.todos.indexOf(todo);
+    if (indexOfTodo !== -1) {
       this.todos.splice(indexOfTodo, 1);
     }
   }
@@ -30,8 +31,9 @@ class Todo {
   getAll() {
     return this.todos;
   }
-  get(indexOfTodo) {
-    if (indexOfTodo >= 0 && indexOfTodo < this.todos.length) {
+  get(todo) {
+    const indexOfTodo = this.todos.indexOf(todo);
+    if (indexOfTodo !== -1) {
       return this.todos[indexOfTodo];
     }
     return null;
